@@ -1,8 +1,5 @@
 package application;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Setback {
 
 	private int setbackID;

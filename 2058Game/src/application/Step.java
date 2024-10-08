@@ -1,8 +1,5 @@
 package application;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Step {
 	private int stepID = 0;
 	private String cost1;
