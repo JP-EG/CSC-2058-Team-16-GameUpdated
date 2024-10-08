@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: #e7ddb3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerGame">
+   <children>
+      <Pane fx:id="square1" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Start">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage1_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage1_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage1_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage1_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square2" layoutX="200.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Task 1(a): Site Assessment">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage2_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage2_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage2_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage2_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square3" layoutX="400.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 1(b): Obtain Permits and Approvals" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage3_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage3_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage3_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage3_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square4" layoutX="600.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Setback Square">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage4_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage4_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage4_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage4_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square5" layoutX="800.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 1(c): Conduct an Environmental Impact Assessment" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage5_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage5_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage5_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage5_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square7" layoutX="1000.0" layoutY="150.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Discovery Square">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage7_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage7_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage7_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage7_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square20" layoutY="150.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 5(b): Resolve any Community Disputes" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage20_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage20_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage20_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage20_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square19" layoutY="300.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Discovery Square" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage19_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage19_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage19_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage19_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square18" layoutY="450.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 5(a): Engage with local community to gain support" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage18_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage18_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage18_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage18_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square17" layoutY="600.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 4(c): Develop a community funding model" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage17_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage17_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage17_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage17_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square16" layoutY="750.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Setback Square" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage16_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage16_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage16_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage16_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square15" layoutX="200.0" layoutY="750.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 4(b): Train Community Members to operate" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage15_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage15_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage15_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage15_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square14" layoutX="400.0" layoutY="750.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 4(a): Establish a maintenance plan" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage14_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage14_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage14_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage14_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square13" layoutX="600.0" layoutY="750.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Discovery Square" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage13_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage13_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage13_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage13_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square12" layoutX="800.0" layoutY="750.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Task 3(c): Test Water Pump" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="playerImage12_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage12_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage12_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage12_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="square11" layoutX="1000.0" layoutY="750.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 3(b): Ensure connection of Solar System" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage11_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage11_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage11_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage11_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square6" layoutX="1000.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 2(a): Obtain Solar Panels, Pipes and Equipment" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage6_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage6_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage6_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage6_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square8" layoutX="1000.0" layoutY="300.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 2(b): Manage Budget for Equipment" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage8_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage8_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage8_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage8_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square9" layoutX="1000.0" layoutY="450.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="54.0" prefWidth="200.0" text="Task 3(a): Assemble and Install Equipment" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage9_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage9_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage9_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage9_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Pane fx:id="square10" layoutX="1000.0" layoutY="600.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: silver; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="15.0" prefHeight="17.0" prefWidth="200.0" text="Setback Square" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="playerImage10_1" fitHeight="60.0" fitWidth="45.0" layoutX="2.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage10_2" fitHeight="60.0" fitWidth="45.0" layoutX="52.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage10_3" fitHeight="60.0" fitWidth="45.0" layoutX="102.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerImage10_4" fitHeight="60.0" fitWidth="45.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Label layoutX="463.0" layoutY="161.0" prefHeight="257.0" prefWidth="274.0" style="-fx-background-color: white;" />
+      <Pane layoutX="210.0" layoutY="161.0" prefHeight="580.0" prefWidth="245.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <ListView fx:id="tasksListView" layoutX="1.0" layoutY="45.0" prefHeight="534.0" prefWidth="243.0" style="-fx-border-color: white;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ListView>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="245.0" text="Tasks" underline="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="119.0" layoutX="124.0" layoutY="45.0" startX="-121.0" stroke="WHITE" strokeWidth="3.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="turnPane" layoutX="463.0" layoutY="161.0" prefHeight="275.0" prefWidth="275.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="13.0" prefHeight="30.0" prefWidth="274.0" text="Turn" underline="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="turnPlayer1" alignment="CENTER" layoutX="15.0" layoutY="45.0" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: green;" text="Player1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="turnPlayer2" alignment="CENTER" layoutX="15.0" layoutY="100.0" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: #f03939;" text="Player2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="turnPlayer3" alignment="CENTER" layoutX="15.0" layoutY="155.0" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: #f03939;" text="Player3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="turnPlayer4" alignment="CENTER" layoutX="15.0" layoutY="210.0" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: #f03939;" text="PLayer4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="745.0" layoutY="161.0" prefHeight="580.0" prefWidth="245.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="245.0" text="Inventory" underline="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/budget.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/labourHours.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="21.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/materialUnits.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/permitToken.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/communityTrustPoints.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/equipmentEfficiencyPoints.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="27.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/technicalExpertise.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/timeUnits.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Inventory/communityEngagement.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="61.0" layoutY="55.0" prefHeight="20.0" prefWidth="96.0" text="Budget (Riel ៛)" underline="true" />
+            <Label alignment="CENTER" layoutX="66.0" layoutY="108.0" prefHeight="20.0" prefWidth="80.0" text="Labour Hours" underline="true" />
+            <Label alignment="CENTER" layoutX="66.0" layoutY="160.0" prefHeight="20.0" prefWidth="80.0" text="Material Units" underline="true" />
+            <Label alignment="CENTER" layoutX="67.0" layoutY="216.0" prefHeight="20.0" prefWidth="80.0" text="Permit Tokens" textAlignment="CENTER" underline="true" wrapText="true" />
+            <Label alignment="CENTER" layoutX="67.0" layoutY="266.0" prefHeight="40.0" prefWidth="80.0" text="Community Trust Points" textAlignment="CENTER" underline="true" wrapText="true" />
+            <Label alignment="CENTER" layoutX="65.0" layoutY="326.0" prefHeight="40.0" prefWidth="90.0" text="Equipment Efficiency Points" textAlignment="CENTER" underline="true" wrapText="true" />
+            <Label alignment="CENTER" layoutX="81.0" layoutY="385.0" prefHeight="40.0" prefWidth="55.0" text="Technical Expertise" underline="true" wrapText="true" />
+            <Label alignment="CENTER" layoutX="67.0" layoutY="455.0" prefHeight="20.0" prefWidth="80.0" text="Time Units" underline="true" />
+            <Label alignment="CENTER" layoutX="68.0" layoutY="503.0" prefHeight="40.0" prefWidth="80.0" text="Community Engagement" textAlignment="CENTER" underline="true" wrapText="true" />
+            <Label fx:id="budgetLabel" alignment="CENTER" layoutX="164.0" layoutY="57.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="labourHoursLabel" alignment="CENTER" layoutX="164.0" layoutY="110.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="materialUnitsLabel" alignment="CENTER" layoutX="164.0" layoutY="161.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="permitTokensLabel" alignment="CENTER" layoutX="164.0" layoutY="218.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="communityTrustPointsLabel" alignment="CENTER" layoutX="164.0" layoutY="278.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="equipmentEfficiencyPointsLabel" alignment="CENTER" layoutX="164.0" layoutY="338.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="technicalExpertiseLabel" alignment="CENTER" layoutX="164.0" layoutY="397.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="timeUnitsLabel" alignment="CENTER" layoutX="164.0" layoutY="457.0" prefHeight="17.0" prefWidth="80.0" />
+            <Label fx:id="communityEngagementLabel" alignment="CENTER" layoutX="164.0" layoutY="515.0" prefHeight="17.0" prefWidth="80.0" />
+         </children></Pane>
+      <Button fx:id="diceRollButton" layoutX="586.0" layoutY="612.0" mnemonicParsing="false" onAction="#switchToPopUp" prefHeight="90.0" prefWidth="130.0" style="-fx-background-color: lightblue; -fx-border-color: black;" />
+      <ImageView fx:id="playerTurnImage" fitHeight="163.0" fitWidth="151.0" layoutX="530.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="gameWonButton" layoutX="587.0" layoutY="620.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#switchToGameWon" prefHeight="90.0" prefWidth="130.0" text="Win Game!" visible="false" />
+      <Button fx:id="objectivesButton" alignment="TOP_CENTER" layoutX="485.0" layoutY="612.0" mnemonicParsing="false" onMouseEntered="#showObjectives" onMouseExited="#dontShowObjectives" prefHeight="90.0" prefWidth="80.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Objectives">
+         <font>
+            <Font name="MuktaMahee Bold" size="13.0" />
+         </font></Button>
+      <ImageView fx:id="objectiveIcon" fitHeight="61.0" fitWidth="72.0" layoutX="498.0" layoutY="639.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/obj.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="endGame" layoutX="485.0" layoutY="708.0" mnemonicParsing="false" onAction="#endGame" prefHeight="3.0" prefWidth="230.0" style="-fx-background-color: #f9cbc5; -fx-border-color: black;" text="End Game!">
+         <font>
+            <Font name="MuktaMahee Bold" size="13.0" />
+         </font></Button>
+      <Pane fx:id="popUpPane" layoutX="210.0" layoutY="161.0" prefHeight="580.0" prefWidth="528.0" style="-fx-background-color: white; -fx-border-color: black;" visible="false">
+         <children>
+            <Rectangle fx:id="borderLabel" arcHeight="5.0" arcWidth="5.0" fill="#d2d3c6" height="534.0" layoutX="11.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="506.0" />
+            <Button fx:id="closeButton" layoutX="12.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleCloseButton" text="Close" />
+            <Label fx:id="taskLandedOnLabel" alignment="CENTER" layoutX="12.0" layoutY="86.0" prefHeight="40.0" prefWidth="504.0" text="taskLandedOnLabel" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="numberRolledLabel" alignment="CENTER" layoutX="12.0" layoutY="47.0" prefHeight="40.0" prefWidth="504.0" text="numberRolledLabel" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="taskDescriptionLabel" alignment="CENTER" layoutX="11.0" layoutY="112.0" prefHeight="40.0" prefWidth="504.0" text="taskDescriptionLabel" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="taskChoiceLabel" alignment="CENTER" layoutX="12.0" layoutY="233.0" prefHeight="40.0" prefWidth="504.0" text="taskChoiceLabel" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Button fx:id="assignButton" layoutX="84.0" layoutY="341.0" mnemonicParsing="false" onAction="#assignButton" prefHeight="57.0" prefWidth="97.0" style="-fx-background-color: red;" text="Assign">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="yesButton" layoutX="338.0" layoutY="341.0" mnemonicParsing="false" onAction="#yesButton" prefHeight="57.0" prefWidth="97.0" style="-fx-background-color: green;" text="Yes">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="taskResourceRequiredLost1" alignment="CENTER" layoutX="12.0" layoutY="157.0" prefHeight="40.0" prefWidth="504.0" text="taskResourceRequiredLost1" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Label fx:id="taskResourceRequiredLost2" alignment="CENTER" layoutX="14.0" layoutY="182.0" prefHeight="40.0" prefWidth="504.0" text="taskResourceRequiredLost2" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Label fx:id="taskResourceGained1" alignment="CENTER" layoutX="12.0" layoutY="418.0" prefHeight="40.0" prefWidth="504.0" text="taskResourceGainedLabel1" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Label fx:id="taskResourceGained2" alignment="CENTER" layoutX="12.0" layoutY="458.0" prefHeight="40.0" prefWidth="504.0" text="taskResourceGainedLabel2" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Label fx:id="assignLabelText" alignment="CENTER" layoutX="12.0" layoutY="259.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="504.0" text="assignLabelText" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Label fx:id="closeLabelText" alignment="CENTER" layoutX="11.0" layoutY="286.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="504.0" text="closeLabelText" textAlignment="CENTER" visible="false" wrapText="true" />
+            <Pane fx:id="onTopOfPopUpUIPane" layoutX="11.0" layoutY="35.0" prefHeight="534.0" prefWidth="506.0" style="-fx-background-color: d2d3c6; -fx-border-color: black;" visible="false">
+               <children>
+                  <Pane fx:id="assignTaskPane" layoutX="116.0" layoutY="24.0" prefHeight="275.0" prefWidth="275.0" style="-fx-background-color: d2d3c6;">
+                     <children>
+                        <Label alignment="CENTER" layoutY="13.0" prefHeight="30.0" prefWidth="274.0" text="Assign a player the task!" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="p1AssignTaskButton" layoutX="15.0" layoutY="46.0" mnemonicParsing="false" onAction="#assignPlayerToTaskButton" prefHeight="50.0" prefWidth="245.0" text="Player1" />
+                        <Button fx:id="p2AssignTaskButton" layoutX="15.0" layoutY="101.0" mnemonicParsing="false" onAction="#assignPlayerToTaskButton" prefHeight="50.0" prefWidth="245.0" text="Player2" />
+                        <Button fx:id="p3AssignTaskButton" layoutX="15.0" layoutY="156.0" mnemonicParsing="false" onAction="#assignPlayerToTaskButton" prefHeight="50.0" prefWidth="245.0" text="Player3" />
+                        <Button fx:id="p4AssignTaskButton" layoutX="15.0" layoutY="211.0" mnemonicParsing="false" onAction="#assignPlayerToTaskButton" prefHeight="50.0" prefWidth="245.0" text="Player4" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="playerAssignedLabel" alignment="CENTER" layoutX="1.0" layoutY="308.0" prefHeight="40.0" prefWidth="504.0" text="playerAssignedLabel" visible="false" wrapText="true" />
+                  <Label fx:id="playerAssignedInfoLabel" alignment="CENTER" layoutX="1.0" layoutY="332.0" prefHeight="40.0" prefWidth="504.0" text="playerAssignedInfoLabel" visible="false" wrapText="true" />
+                  <Label fx:id="playerAssignedInfoLabel2" alignment="CENTER" layoutX="2.0" layoutY="357.0" prefHeight="40.0" prefWidth="504.0" text="playerAssignedInfoLabel2" visible="false" wrapText="true" />
+                  <Button fx:id="noButton" layoutX="84.0" layoutY="421.0" mnemonicParsing="false" onAction="#noButton" prefHeight="57.0" prefWidth="97.0" style="-fx-background-color: red;" text="No" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="yesButton1" layoutX="338.0" layoutY="421.0" mnemonicParsing="false" onAction="#yesButtonAssignPlayer" prefHeight="57.0" prefWidth="97.0" style="-fx-background-color: green;" text="Yes" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="tasksObjectivePane" layoutX="200.0" layoutY="150.0" onMouseEntered="#showObjectives" onMouseExited="#dontShowObjectives" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: f8f3fe; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutX="-27.0" layoutY="6.0" prefHeight="36.0" prefWidth="800.0" text="Objectives --&gt; Tasks" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="24.0" prefHeight="25.0" prefWidth="396.0" text="Objective 1: Site Assessment and Planning" textAlignment="CENTER" textFill="#a48418bd" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="44.0" prefHeight="25.0" prefWidth="396.0" text="Task 1(a): Conduct site assessment" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="28.0" layoutY="63.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 10 Labour Hours, 2 Time Units" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="-2.0" layoutY="82.0" prefHeight="36.0" prefWidth="308.0" text="•Reward: 1 Technical Expertise, 2 Community Trust Points" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="18.0" layoutY="110.0" prefHeight="25.0" prefWidth="396.0" text="Task 1(b): Obtain necessary permits and approvals" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="32.0" layoutY="182.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 500 (Budget), 2 Permit Tokens" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="35.0" layoutY="147.0" prefHeight="25.0" prefWidth="396.0" text="•Reward: 3 Permit Tokens, ៛1,000 (Budget Savings)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="9.0" layoutY="219.0" prefHeight="25.0" prefWidth="396.0" text="Objective 2: Equipment Procurement" textAlignment="CENTER" textFill="#a48418bd" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="241.0" prefHeight="36.0" prefWidth="323.0" text="Task 2(a): Procure solar panels, pumps, pipes, and other equipment" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="23.0" layoutY="276.0" prefHeight="25.0" prefWidth="258.0" text="•Cost: ៛5,000 (Budget), 5 Materials Units" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="22.0" layoutY="295.0" prefHeight="36.0" prefWidth="308.0" text="•Reward: 2 Equipment Efficiency Points, ៛2,000 (Budget Savings)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="14.0" layoutY="329.0" prefHeight="36.0" prefWidth="314.0" text="Task 2(b): Manage the budget for equipment efficiently" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="21.0" layoutY="353.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: ៛1,000 (Budget), 2 Technical Expertise (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="19.0" layoutY="370.0" prefHeight="25.0" prefWidth="396.0" text="•Reward: ៛3,000 (Budget Savings), 3 Equipment Efficiency Points" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="10.0" layoutY="394.0" prefHeight="25.0" prefWidth="396.0" text="Objective 3: Construction and Installation" textAlignment="CENTER" textFill="#a48418bd" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="413.0" prefHeight="25.0" prefWidth="396.0" text="Task 3(a): Assemble and install the equipment" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="30.0" layoutY="433.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 5 Materials Units, 10 Labour Hours" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="27.0" layoutY="444.0" prefHeight="36.0" prefWidth="360.0" text="•Reward: 2 Technical Expertise, 8 Labour Hours" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="20.0" layoutY="471.0" prefHeight="25.0" prefWidth="396.0" text="Task 3(b): Ensure the proper connection of the solar-powered system" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="30.0" layoutY="489.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 5 Equipment Efficiency Points, 1 Technical Expertise (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="15.0" layoutY="507.0" prefHeight="36.0" prefWidth="360.0" text="•Reward: 1 Community Trust Point, 2 Technical Expertise (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="20.0" layoutY="538.0" prefHeight="25.0" prefWidth="396.0" text="Task 3(c): Test the water pump to ensure it operates effectively" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="30.0" layoutY="556.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 4 Equipment Efficiency Points, 4 Time Units" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="30.0" layoutY="573.0" prefHeight="25.0" prefWidth="396.0" text="•Reward: 8 Labour Hours, 3 Time Units" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="392.0" layoutY="39.0" prefHeight="25.0" prefWidth="396.0" text="Objective 4: Maintenance and Sustainability" textAlignment="CENTER" textFill="#a48418bd" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="393.0" layoutY="58.0" prefHeight="25.0" prefWidth="422.0" text="Task 4(a): Establish a maintenance plan for routine inspections and repairs" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="394.0" layoutY="77.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: ៛2,000 (Budget), 3 Technical Expertise (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="402.0" layoutY="89.0" prefHeight="36.0" prefWidth="360.0" text="•Reward: 2 Permit Tokens, 4 Labour Hours" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="388.0" layoutY="122.0" prefHeight="50.0" prefWidth="396.0" text="Task 4(b): Train local community members to operate and maintain the water pump" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="405.0" layoutY="161.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 6 Labour Hours, 1 Community Engagement (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="405.0" layoutY="174.0" prefHeight="37.0" prefWidth="413.0" text="•Reward: ៛1000 Budget, 2 Community Trust Points" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="377.0" layoutY="217.0" prefHeight="40.0" prefWidth="396.0" text="Task 4(c): Develop a community-based funding model to support ongoing maintenance" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="403.0" layoutY="251.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: ៛3,000 (Budget), 2 Community Engagement (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="403.0" layoutY="270.0" prefHeight="25.0" prefWidth="396.0" text="•Reward: 10 Material Units, ៛4,000 (Budget Savings)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="414.0" layoutY="300.0" prefHeight="25.0" prefWidth="396.0" text="Objective 5: Community Support and Engagement" textAlignment="CENTER" textFill="#a48418bd" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="416.0" layoutY="322.0" prefHeight="25.0" prefWidth="360.0" text="Task 5(a): Engage with the local community to gain their support" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="423.0" layoutY="341.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 3 Time Units, 2 Community  Trust Points" textAlignment="CENTER" textFill="#252525" wrapText="true" />
+            <Label layoutX="417.0" layoutY="362.0" prefHeight="36.0" prefWidth="360.0" text="•Reward: 5 Community Trust Points, 2 Community Engagement (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="409.0" layoutY="392.0" prefHeight="39.0" prefWidth="396.0" text="Task 5(b): Resolve any community disputes or concerns related to the project" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="422.0" layoutY="425.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: 2 Time Units, 2 Community Engagement (Resource)" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="423.0" layoutY="437.0" prefHeight="40.0" prefWidth="360.0" text="•Reward: 6 Time Units, 3 Community Trust Points" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="416.0" layoutY="479.0" prefHeight="25.0" prefWidth="396.0" text="Winning the Game:" textAlignment="CENTER" textFill="#a48418bd" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="417.0" layoutY="495.0" prefHeight="98.0" prefWidth="382.0" text="•Players win the game by successfully completing all objectives and tasks, achieving a total of 20 Community Trust Points, ensuring the water pump is operational (Operational Water Pump resource obtained), and maintaining a positive budget balance." textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="15.0" layoutY="165.0" prefHeight="25.0" prefWidth="396.0" text="Task 1(c): Conduct an Environmental Impact Assessment" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="38.0" layoutY="128.0" prefHeight="25.0" prefWidth="396.0" text="•Cost: ៛2,000 (Budget), 3 Time Units" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="32.0" layoutY="199.0" prefHeight="25.0" prefWidth="396.0" text="•Reward: 3 Permit Tokens, ៛1,500 (Budget Savings)" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

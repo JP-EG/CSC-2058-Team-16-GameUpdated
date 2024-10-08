@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerPlayerSelect">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3cb3c0" height="190.0" layoutY="204.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#024064" height="198.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Label alignment="CENTER" layoutY="219.0" prefHeight="92.0" prefWidth="800.0" text="Character Select Screen" textFill="#fefed3">
+         <font>
+            <Font name="MS Reference Sans Serif" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="6.0" layoutY="19.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character1" fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="23.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character1.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="138.0" layoutY="19.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character2" fitHeight="150.0" fitWidth="200.0" layoutX="143.0" layoutY="24.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character2.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="270.0" layoutY="19.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character3" fitHeight="150.0" fitWidth="200.0" layoutX="275.0" layoutY="23.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character3.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="401.0" layoutY="19.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character4" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="23.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character4.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle5" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="533.0" layoutY="19.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character5" fitHeight="150.0" fitWidth="200.0" layoutX="538.0" layoutY="23.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character5.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle6" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="665.0" layoutY="19.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character6" fitHeight="150.0" fitWidth="200.0" layoutX="670.0" layoutY="23.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character6.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#024064" height="198.0" layoutY="402.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle fx:id="rectangle7" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="6.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character7" fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="425.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character7.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle8" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="138.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character8" fitHeight="150.0" fitWidth="200.0" layoutX="143.0" layoutY="425.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character8.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle9" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="270.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character9" fitHeight="150.0" fitWidth="200.0" layoutX="275.0" layoutY="425.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character9.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle10" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="401.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character10" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="425.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character10.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle11" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="533.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character11" fitHeight="150.0" fitWidth="200.0" layoutX="538.0" layoutY="425.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character11.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangle12" arcHeight="5.0" arcWidth="5.0" fill="#2aed18b2" height="158.0" layoutX="665.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="128.0" />
+      <ImageView fx:id="character12" fitHeight="150.0" fitWidth="200.0" layoutX="670.0" layoutY="425.0" onMouseClicked="#selectedPlayer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/character12.png" />
+         </image>
+      </ImageView>
+      <Line endX="674.5" endY="1.0" layoutX="122.0" layoutY="197.0" startX="-122.0" startY="1.0" strokeWidth="5.0" />
+      <Line endX="678.0" layoutX="122.0" layoutY="400.0" startX="-122.0" strokeWidth="5.0" />
+      <Button fx:id="characterSelectButton" disable="true" layoutX="222.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToPIS" prefHeight="27.0" prefWidth="368.0" style="-fx-background-color: #fefed3;" text="Start Game!" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="K2D SemiBold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="choosePlayerLabel" alignment="CENTER" layoutX="-2.0" layoutY="320.0" prefHeight="17.0" prefWidth="800.0" text="Choose between 2-4 players!" textFill="#fefed3">
+         <font>
+            <Font name="MS Reference Sans Serif" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+   </children>
+</AnchorPane>
