@@ -1,12 +1,6 @@
 package application;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.swing.ImageIcon;
-
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Player {

@@ -1,7 +1,5 @@
 package application;
 
-import java.util.List;
-
 public class Task {
 
 	private int taskID;
