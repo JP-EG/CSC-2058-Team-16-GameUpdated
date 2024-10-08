@@ -1,4 +1,4 @@
-package application;
+package controllers;
 
 import java.awt.MenuBar;
 import java.io.IOException;
@@ -9,6 +9,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import application.Discovery;
+import application.Game;
+import application.Player;
+import application.Resource;
+import application.Setback;
+import application.Square;
+import application.Task;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

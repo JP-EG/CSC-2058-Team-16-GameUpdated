@@ -1,6 +1,8 @@
-package application;
+package controllers;
 
 import java.io.IOException;
+
+import application.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -15,7 +15,7 @@
             "name": "App",
             "request": "launch",
             "vmArgs": "--module-path /Users/jakubbojarski/Downloads/javafx-sdk-23/lib --add-modules javafx.controls,javafx.fxml",
-            "mainClass": "application.Main",
+            "mainClass": "controllers.Main",
             "projectName": "CSC-2058-Team-16-GameUpdated_4f84f273"
         }
     ]
