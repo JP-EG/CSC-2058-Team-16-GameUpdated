@@ -59,7 +59,7 @@ public class ControllerPlayerSelect {
 
     public void switchToPIS(ActionEvent event) throws IOException {
         // Pass selectedPlayers to the ControllerGame
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PlayerInfoScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxmlFiles/PlayerInfoScreen.fxml"));
         Parent root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

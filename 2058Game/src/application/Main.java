@@ -16,7 +16,7 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameIntro.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxmlFiles/GameIntro.fxml"));
         Parent root = loader.load();
         
         // Set the style of the stage to UNDECORATED

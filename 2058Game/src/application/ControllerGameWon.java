@@ -50,7 +50,7 @@ public class ControllerGameWon {
 		ControllerGame.squareToPlayer.clear(); // Clear the squares of the players from previous game
 		Player.nextID = 0; // Reset the counter for creating new players
 
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("PlayerSelectScreen.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxmlFiles/PlayerSelectScreen.fxml"));
 		Parent root = loader.load();
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);

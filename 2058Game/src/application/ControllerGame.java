@@ -2232,7 +2232,7 @@ public class ControllerGame extends Main {
 	
 	public void switchToGameWon(ActionEvent event) throws IOException {
 	        // Pass selectedPlayers to the ControllerGame
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameWon.fxml"));
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxmlFiles.GameWon.fxml"));
 	        Parent root = loader.load();
 	        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 	        scene = new Scene(root);
