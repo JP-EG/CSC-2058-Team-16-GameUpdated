@@ -71,7 +71,7 @@ public class ControllerPlayerInfoScreen {
 	public void switchToGame(ActionEvent event) throws IOException {
 		getPlayerNames();
         // Pass selectedPlayers to the ControllerGame
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Game.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxmlFiles/Game.fxml"));
         Parent root = loader.load();
         ControllerGame gameController = loader.getController();
         gameController.initializeGame();
