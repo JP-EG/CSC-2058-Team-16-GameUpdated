@@ -747,11 +747,11 @@ public class ControllerGame extends Main {
 	public void checkPlayerHasEnoughResources() {
 		int requiredAmount1 = 0;
 		int requiredAmount2 = 0;
+		requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
+		requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 
 		switch (currentPlayer.getCurrentSquare().getTask().getTaskID()) {
 		case (1):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				taskResourceGained2.setVisible(false);
 				if (currentPlayer.getResource().getLabourHours() < requiredAmount1) {
@@ -772,9 +772,6 @@ public class ControllerGame extends Main {
 			}
 			break;
 		case (2):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getBudget() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -796,9 +793,6 @@ public class ControllerGame extends Main {
 			}
 			break;
 		case (3):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getPermitTokens() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -820,9 +814,6 @@ public class ControllerGame extends Main {
 			}
 			break;
 		case (4):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getBudget() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -844,9 +835,6 @@ public class ControllerGame extends Main {
 			}
 			break;
 		case (5):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getBudget() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -869,9 +857,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (6):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getMaterialUnits() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -894,9 +879,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (7):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getEquipmentEfficiencyPoints() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -919,9 +901,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (8):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getEquipmentEfficiencyPoints() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -944,10 +923,7 @@ public class ControllerGame extends Main {
 
 			break;
 		case (9):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			if (requiredAmount1 != 0) {
+ 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getBudget() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
 					taskResourceGained1.setText(
@@ -969,9 +945,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (10):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getLabourHours() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -994,9 +967,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (11):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getBudget() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -1019,9 +989,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (12):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getTimeUnits() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
@@ -1044,9 +1011,6 @@ public class ControllerGame extends Main {
 
 			break;
 		case (13):
-
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
 			if (requiredAmount1 != 0) {
 				if (currentPlayer.getResource().getTimeUnits() < requiredAmount1) {
 					taskResourceGained2.setVisible(false);
