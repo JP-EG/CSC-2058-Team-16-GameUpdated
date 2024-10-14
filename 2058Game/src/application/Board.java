@@ -6,12 +6,10 @@ public class Board extends Square {
 
 	public Board(int sqID, String sqName, String description) {
 		super(sqName);
-
-		initialise();
-
+		initialiseBoard();
 	}
 
-	public void initialise() {
+	public void initialiseBoard() {
 		
 		squares = new Square[20];
 
