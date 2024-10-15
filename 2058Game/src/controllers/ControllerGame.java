@@ -32,8 +32,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-
-import controllers.ControllerHelpers.PlayerResourceChecker;
+import controllers.ControllerHelpers.AssignedPlayerResourceChecker;
+import controllers.ControllerHelpers.CurrentPlayerResourceChecker;
 
 public class ControllerGame extends Main {
 	
@@ -114,7 +114,8 @@ public class ControllerGame extends Main {
 	
 	private ControllerPlayerInfoScreen controllerPlayerInfoScreen = new ControllerPlayerInfoScreen();
 
-	private PlayerResourceChecker playerResourceChecker;
+	private CurrentPlayerResourceChecker currentPlayerResourceChecker;
+	private AssignedPlayerResourceChecker assignedPlayerResourceChecker;
 	
 	// private Square initialSq = game.getBoard().getSquare(0);
 
@@ -485,7 +486,7 @@ public class ControllerGame extends Main {
 						+ task.getSteps().getReward2());
 				assignLabelText.setText("Skip this task and assign it to a different player? Press Assign");
 				closeLabelText.setText("Reject this task? Press Close");
-				playerResourceChecker = new PlayerResourceChecker(currentPlayer, taskResourceGained1, taskResourceGained2, yesButton);
+				currentPlayerResourceChecker = new CurrentPlayerResourceChecker(currentPlayer, taskResourceGained1, taskResourceGained2, yesButton);
 				updateTasksPane(currentPlayer);
 				updateResourcesPane(currentPlayer);
 			} else {
@@ -522,7 +523,7 @@ public class ControllerGame extends Main {
 					assignLabelText.setText("Skip this task and assign it to a different player? Press Assign");
 					closeLabelText.setText("Reject this task? Press Close");
 				}
-				playerResourceChecker = new PlayerResourceChecker(currentPlayer, taskResourceGained1, taskResourceGained2, yesButton);
+				currentPlayerResourceChecker = new CurrentPlayerResourceChecker(currentPlayer, taskResourceGained1, taskResourceGained2, yesButton);
 				updateTasksPane(currentPlayer);
 				updateResourcesPane(currentPlayer);
 			}
@@ -1447,365 +1448,6 @@ public class ControllerGame extends Main {
 		updateResourcesPane(currentPlayer);
 	}
 	
-	public void checkAssignedPlayerHasEnoughResources(Player assignedTaskPlayer) {
-		int requiredAmount1 = 0;
-		int requiredAmount2 = 0;
-
-		switch (currentPlayer.getCurrentSquare().getTask().getTaskID()) {
-		case (1):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (2):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (3):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getPermitTokens() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getBudget() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getPermitTokens() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getBudget() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (4):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getMaterialUnits() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getMaterialUnits() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (5):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTechnicalExpertise() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTechnicalExpertise() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (6):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getMaterialUnits() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getLabourHours() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getMaterialUnits() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (7):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getEquipmentEfficiencyPoints() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTechnicalExpertise() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getEquipmentEfficiencyPoints() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTechnicalExpertise() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (8):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getEquipmentEfficiencyPoints() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getEquipmentEfficiencyPoints() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (9):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTechnicalExpertise() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTechnicalExpertise() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (10):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getCommunityEngagement() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getCommunityEngagement() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (11):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getCommunityEngagement() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getBudget() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getCommunityEngagement() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (12):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getCommunityTrustPoints() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getCommunityTrustPoints() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-				playerAssignedInfoLabel2.setVisible(true);
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		case (13):
-			requiredAmount1 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1();
-			requiredAmount2 = currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2();
-			playerAssignedInfoLabel2.setVisible(true);
-			if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount1
-					|| assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-				playerAssignedInfoLabel.setVisible(true);
-				if (assignedTaskPlayer.getResource().getLabourHours() < requiredAmount1) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost1()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity1());
-				} else if (assignedTaskPlayer.getResource().getTimeUnits() < requiredAmount2) {
-					playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " doesn't have enough "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getCost2()
-							+ ", the amount needed = "
-							+ currentPlayer.getCurrentSquare().getTask().getSteps().getQuantity2());
-				}
-		        playerAssignedInfoLabel2.setText("Press Close");
-			} else {
-		        noButton.setVisible(true);
-		        yesButton1.setVisible(true);
-		        playerAssignedInfoLabel.setText(assignedTaskPlayer.getName() + " do you want to take this task and use your resources to help a friend? Press Yes");
-		        playerAssignedInfoLabel2.setText("Dont want this task? Press No or Close");
-			}
-			break;
-		}
-		
-	}
-	
 	public void assignButton(ActionEvent event) {
 	    onTopOfPopUpUIPane.setVisible(true);
 
@@ -1842,6 +1484,8 @@ public class ControllerGame extends Main {
 	}
 	
 	public void assignPlayerToTaskButton(ActionEvent event) {
+		assignedPlayerResourceChecker = new AssignedPlayerResourceChecker(currentPlayer, playerAssignedInfoLabel, playerAssignedInfoLabel2, yesButton1, noButton);
+
 	    Button clickedButton = (Button) event.getSource();
 	    int assignedPlayerIndex = Arrays.asList(p1AssignTaskButton, p2AssignTaskButton, p3AssignTaskButton, p4AssignTaskButton)
 	            .indexOf(clickedButton);
@@ -1859,7 +1503,7 @@ public class ControllerGame extends Main {
 	    	playerAssignedLabel.setVisible(true);
 	        playerAssignedInfoLabel.setVisible(true);
 	        playerAssignedLabel.setText("You have chosen to give the task to: " + assignedPlayer.getName());
-	        checkAssignedPlayerHasEnoughResources(assignedPlayer);	    
+			assignedPlayerResourceChecker.checkAssignedPlayerHasEnoughResources(assignedPlayer);
 	    }
 	    p1AssignTaskButton.setDisable(true);
 	    p2AssignTaskButton.setDisable(true);
